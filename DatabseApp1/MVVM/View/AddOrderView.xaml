@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DatabaseApplication.MVVM.View.AddOrderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseApplication.MVVM.View" xmlns:src="clr-namespace:DatabaseApplication.Database"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border x:Name="searchButton" Height="25" Width="100" Background="#F4F4EA" Grid.Row="0" CornerRadius="10" Margin="454,5,46,59" MouseLeftButtonDown="searchButton_MouseLeftButtonDown">
+            <TextBlock Text="Search" Foreground="#1D004A" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <DataGrid x:Name="customersDataGrid" Foreground="#1D004A" Background="#F4F4EA " HorizontalAlignment="Left" Height="122" VerticalAlignment="Top" Width="590" Margin="0,58,0,0" Grid.RowSpan="2" SelectionChanged="customersDataGrid_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Foreground="#F4F4EA " TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="16" Margin="0,10,0,0"/>
+        <StackPanel Grid.Row="2">
+            <StackPanel.Resources>
+                <src:ServiceType x:Key="ServiceType"/>
+            </StackPanel.Resources>
+            <ComboBox x:Name="serviceComboBox" 
+                      ItemsSource="{StaticResource ServiceType}" 
+                      IsEditable="True" IsReadOnly="True" 
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Top" 
+                      Width="177" 
+                      Foreground="#F4F4EA "
+                      Background="#1D004A"
+                      Margin="85,10,0,0"/>
+
+        </StackPanel>
+
+
+
+        <RichTextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="90" Grid.Row="2" VerticalAlignment="Top" Width="590" Foreground="#F4F4EA " Background="#1D004A" Margin="0,63,0,0" Grid.RowSpan="2">
+            <FlowDocument>
+                <Paragraph>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Border x:Name="newOrderButton" Height="25" Width="100" Background="#F4F4EA" Grid.Row="4" CornerRadius="10" Margin="420,6,46,59" >
+            <TextBlock Text="Create Order" FontSize="16" Foreground="#1D004A" VerticalAlignment="Center" HorizontalAlignment="Center" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+        </Border>
+        
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="#F4F4EA " Text="Service" FontSize="18" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="#F4F4EA " Text="Description" FontSize="18" VerticalAlignment="Top" Margin="0,37,0,0" Grid.Row="2"/>
+
+        <Border x:Name="clearButton" Height="25" Width="100" Background="#F4F4EA" Grid.Row="4" CornerRadius="10" Margin="10,6,490,59" MouseLeftButtonDown="clearButton_MouseLeftButtonDown">
+            <TextBlock Text="Clear" Foreground="#1D004A" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+        <TextBox x:Name="nameTextBox" Background="#1D004A" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" Foreground="#F4F4EA " Margin="62,10,0,0"/>
+
+        <DatePicker x:Name="expireDate" Background="#1D004A" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="437,10,0,0" Grid.Row="2" Width="150" Foreground="#F4F4EA "/>
+        
+        <TextBlock HorizontalAlignment="Left" Foreground="#F4F4EA" TextWrapping="Wrap" Text="Expire Date" FontSize="18" VerticalAlignment="Top" Margin="324,10,0,0" Grid.Row="2"/>
+    </Grid>
+</UserControl>

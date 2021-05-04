@@ -1,0 +1,52 @@
+﻿drop database application_db;
+create database application_db;
+use application_db;
+
+create table address(
+	id int auto_increment unique primary key,
+    street varchar(50),
+    number varchar(15) not null,
+    zip_code varchar(20) not null,
+    city varchar(50) not null
+);
+
+create table customers(
+	id int auto_increment unique primary key,
+    first_name varchar(50) not null,
+    last_name varchar(50) not null,
+    phone varchar(15) not null,
+    address int,
+    constraint FK_customerAddress Foreign key (address) REFERENCES address(id) on delete cascade on update cascade
+);
+
+
+create table service_type(
+	id int auto_increment unique primary key,
+    type varchar(50) unique not null,
+    description varchar(255)
+);
+
+create table status(
+	id int auto_increment unique primary key,
+    status varchar(3) unique not null
+);
+
+create table orders(
+    	id int auto_increment unique primary key,
+    customer int,
+    service_type varchar(50) not null,
+    order_date date not null,
+    expire_date date not null,
+    description text(1000),
+    status varchar(3) not null default "ACT",
+    constraint FK_ordersCustomers foreign key (customer) references customers(id) on update cascade on delete set null,
+    constraint FK_ordersServiceType foreign key (service_type) references service_type(type),
+    constraint FK_ordersStatus foreign key (status) references status(status)
+);
+
+INSERT INTO status (status) VALUES
+("ACT"),
+("EXP"),
+("CAN"),
+("COM");
+

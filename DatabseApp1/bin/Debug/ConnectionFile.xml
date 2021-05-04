@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connString>
+  <server>localhost</server> <!-- server address -->
+  <user>root</user> <!-- user name -->
+  <password>Start123!</password> <!-- user password -->
+  <database>application_db</database> <!-- application database name -->
+  <port>3306</port> <!-- port -->
+</connString>

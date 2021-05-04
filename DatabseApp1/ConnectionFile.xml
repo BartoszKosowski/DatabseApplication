@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connString>
+  <server></server> <!-- server address -->
+  <user></user> <!-- user name -->
+  <password></password> <!-- user password -->
+  <database></database> <!-- application database name -->
+  <port></port> <!-- port -->
+</connString>

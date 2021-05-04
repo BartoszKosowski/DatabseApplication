@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="DatabaseApplication.MVVM.View.AddCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseApplication.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   FontSize="26"
+                   Text="Personal Data"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="#F4F4EA"/>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="First Name"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="Last Name"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="Phone Number"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="26"
+                   Text="Address"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="Street"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="House Number"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="7"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="Zip Code"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBlock Grid.Row="8"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="City"
+                   Foreground="#F4F4EA"
+                   Margin="10,0,0,0"/>
+
+        <TextBox x:Name="firstNameTextBox" 
+                 Height="25" 
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="lastNameTextBox" 
+                 Height="25" 
+                 Grid.Row="2" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="phoneNumberTextBox" 
+                 Height="25" 
+                 Grid.Row="3" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="streetTextBox" 
+                 Height="25" 
+                 Grid.Row="5" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="houseNumberTextBox" 
+                 Height="25" 
+                 Grid.Row="6" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="zipCodeTextBox" 
+                 Height="25" 
+                 Grid.Row="7" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+
+        <TextBox x:Name="cityTextBox" 
+                 Height="25" 
+                 Grid.Row="8" 
+                 Grid.Column="1" 
+                 Foreground="#F4F4EA"
+                 Background="#1D004A"
+                 />
+        <Border x:Name="clearButton" Height="25" Width="100" Background="#F4F4EA" Grid.Row="9" Grid.Column="1" CornerRadius="10" Margin="10,10,340,10" MouseLeftButtonDown="clearButton_MouseLeftButtonDown" >
+            <TextBlock Text="Clear" Foreground="#1D004A" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border x:Name="addButton" Height="25" Width="100" Background="#F4F4EA" Grid.Row="9" Grid.Column="1"  CornerRadius="10" Margin="340,10,10,10" MouseLeftButtonDown="addButton_MouseLeftButtonDown"  >
+            <TextBlock Text="Add" Foreground="#1D004A" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+
+
+
+    </Grid>
+</UserControl>
